@@ -1,14 +1,13 @@
 {
-	"name" : "sebastian/money",
+	"name" : "bka/sample-php-1",
 	"description" : "Value Object that represents a monetary value (using a currency's smallest unit)",
 	"keywords" : [
-		"money"
+		"bka"
 	],
-	"homepage" : "http://www.github.com/sebastianbergmann/money",
-	"license" : "BSD-3-Clause",
+	"homepage" : "https://github.com/kabass/sample-php-1",
 	"authors" : [{
-			"name" : "Sebastian Bergmann",
-			"email" : "sebastian@phpunit.de"
+			"name" : "Bassirou KA",
+			"email" : "ka.bassirou@gmail.com"
 		}
 	],
 	"require" : {
