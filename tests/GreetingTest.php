@@ -1,4 +1,5 @@
 <?php
+
 namespace tests;
 
 use PHPUnit\Framework\TestCase;
@@ -14,7 +15,7 @@ require_once 'src/Greeting.php';
 
     
     /**
-     * Tests Greeting->sayHello()
+     * @covers bka\Greeting::sayHello
      */
     public function testCanBeUsedAsString()
     
