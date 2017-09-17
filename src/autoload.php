@@ -7,7 +7,7 @@ spl_autoload_register(
         static $classes = null;
         if ($classes === null) {
             $classes = array(
-                'bka\Greeting' => 'Greeting.php'
+                'bka\\greeting' => '/Greeting.php'
             );
         }
         $cn = strtolower($class);
