@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<annotation-array>
+  <warning plugin="checkstyle@3.49">
+    <message>There must be a single space after the USE keyword</message>
+    <priority>HIGH</priority>
+    <key>-77274357451686253</key>
+    <lineRanges>
+      <range plugin="analysis-core@1.92">
+        <start>2</start>
+        <end>2</end>
+      </range>
+    </lineRanges>
+    <primaryLineNumber>2</primaryLineNumber>
+    <fileName>/home/bka/.jenkins/workspace/feature-sample-php-1-master/src/index.php</fileName>
+    <moduleName></moduleName>
+    <packageName>-</packageName>
+    <category>UseDeclaration</category>
+    <type>SpaceAfterUse</type>
+    <contextHashCode>-1676205011</contextHashCode>
+    <origin>checkstyle</origin>
+    <pathName>src</pathName>
+    <primaryColumnStart>1</primaryColumnStart>
+    <primaryColumnEnd>1</primaryColumnEnd>
+    <build>1</build>
+    <authorName>bassirou</authorName>
+    <authorEmail>ka.bassirou@gmail.com</authorEmail>
+    <commitId>9f38e9722cfc755a3865aa1ef9ff1aa4c2b34edc</commitId>
+  </warning>
+  <warning plugin="checkstyle@3.49">
+    <message>Expected 1 newline at end of file; 0 found</message>
+    <priority>HIGH</priority>
+    <key>-77274357451686252</key>
+    <lineRanges>
+      <range plugin="analysis-core@1.92">
+        <start>8</start>
+        <end>8</end>
+      </range>
+    </lineRanges>
+    <primaryLineNumber>8</primaryLineNumber>
+    <fileName reference="../../warning/fileName"/>
+    <moduleName reference="../../warning/moduleName"/>
+    <packageName reference="../../warning/packageName"/>
+    <category>EndFileNewline</category>
+    <type>NoneFound</type>
+    <contextHashCode>-291827193</contextHashCode>
+    <origin>checkstyle</origin>
+    <pathName>src</pathName>
+    <primaryColumnStart>27</primaryColumnStart>
+    <primaryColumnEnd>27</primaryColumnEnd>
+    <build>1</build>
+    <authorName>bassirou</authorName>
+    <authorEmail>ka.bassirou@gmail.com</authorEmail>
+    <commitId>9f38e9722cfc755a3865aa1ef9ff1aa4c2b34edc</commitId>
+  </warning>
+  <warning plugin="checkstyle@3.49">
+    <message>Whitespace found at end of line</message>
+    <priority>HIGH</priority>
+    <key>-77274357451686251</key>
+    <lineRanges>
+      <range plugin="analysis-core@1.92">
+        <start>7</start>
+        <end>7</end>
+      </range>
+    </lineRanges>
+    <primaryLineNumber>7</primaryLineNumber>
+    <fileName>/home/bka/.jenkins/workspace/feature-sample-php-1-master/src/Greeting.php</fileName>
+    <moduleName reference="../../warning/moduleName"/>
+    <packageName reference="../../warning/packageName"/>
+    <category>SuperfluousWhitespace</category>
+    <type>EndLine</type>
+    <contextHashCode>-1941656291</contextHashCode>
+    <origin>checkstyle</origin>
+    <pathName>src</pathName>
+    <primaryColumnStart>3</primaryColumnStart>
+    <primaryColumnEnd>3</primaryColumnEnd>
+    <build>1</build>
+    <authorName>bassirou</authorName>
+    <authorEmail>ka.bassirou@gmail.com</authorEmail>
+    <commitId>9f38e9722cfc755a3865aa1ef9ff1aa4c2b34edc</commitId>
+  </warning>
+  <warning plugin="checkstyle@3.49">
+    <message>Visibility must be declared on method &quot;sayHello&quot;</message>
+    <priority>HIGH</priority>
+    <key>-77274357451686250</key>
+    <lineRanges>
+      <range plugin="analysis-core@1.92">
+        <start>11</start>
+        <end>11</end>
+      </range>
+    </lineRanges>
+    <primaryLineNumber>11</primaryLineNumber>
+    <fileName reference="../../warning[3]/fileName"/>
+    <moduleName reference="../../warning/moduleName"/>
+    <packageName reference="../../warning/packageName"/>
+    <category>MethodScope</category>
+    <type>Missing</type>
+    <contextHashCode>-1486122003</contextHashCode>
+    <origin>checkstyle</origin>
+    <pathName>src</pathName>
+    <primaryColumnStart>5</primaryColumnStart>
+    <primaryColumnEnd>5</primaryColumnEnd>
+    <build>1</build>
+    <authorName>bassirou</authorName>
+    <authorEmail>ka.bassirou@gmail.com</authorEmail>
+    <commitId>9f38e9722cfc755a3865aa1ef9ff1aa4c2b34edc</commitId>
+  </warning>
+  <warning plugin="checkstyle@3.49">
+    <message>Expected 1 blank line at end of file; 2 found</message>
+    <priority>HIGH</priority>
+    <key>-77274357451686249</key>
+    <lineRanges>
+      <range plugin="analysis-core@1.92">
+        <start>15</start>
+        <end>15</end>
+      </range>
+    </lineRanges>
+    <primaryLineNumber>15</primaryLineNumber>
+    <fileName reference="../../warning[3]/fileName"/>
+    <moduleName reference="../../warning/moduleName"/>
+    <packageName reference="../../warning/packageName"/>
+    <category>EndFileNewline</category>
+    <type>TooMany</type>
+    <contextHashCode>2043133203</contextHashCode>
+    <origin>checkstyle</origin>
+    <pathName>src</pathName>
+    <primaryColumnStart>1</primaryColumnStart>
+    <primaryColumnEnd>1</primaryColumnEnd>
+    <build>1</build>
+    <authorName>bassirou</authorName>
+    <authorEmail>ka.bassirou@gmail.com</authorEmail>
+    <commitId>9f38e9722cfc755a3865aa1ef9ff1aa4c2b34edc</commitId>
+  </warning>
+</annotation-array>

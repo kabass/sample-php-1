@@ -1,0 +1,20 @@
+Started by user [8mha:////4POqbl6F030VAGkNHq6TbJkpMnOvFrY+hT+44N0I3PiMAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgZu/dLi1CL9xJTczDwAZ3pnlMAAAAA=[0mbass
+Building in workspace /home/bka/.jenkins/workspace/watch-for-new-branch
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@github.com:kabass/sample-php-1.git # timeout=10
+Fetching upstream changes from git@github.com:kabass/sample-php-1.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:kabass/sample-php-1.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 381fe8f24a9e9b7adf1cebbcd2508ce4bdeb0a12 (refs/remotes/origin/master)
+Commit message: "update build.xml"
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 381fe8f24a9e9b7adf1cebbcd2508ce4bdeb0a12
+First time build. Skipping changelog.
+[watch-for-new-branch] $ /bin/bash /tmp/jenkins497625070723191556.sh
+
+ERROR: No such job 'feature-watch-for-new-branch-master'; perhaps you meant 'watch-for-new-branch'?
+Finished: SUCCESS

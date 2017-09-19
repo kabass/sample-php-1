@@ -1,0 +1,50 @@
+Started by user [8mha:////4POqbl6F030VAGkNHq6TbJkpMnOvFrY+hT+44N0I3PiMAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgZu/dLi1CL9xJTczDwAZ3pnlMAAAAA=[0mbass
+Building in workspace /home/bka/.jenkins/workspace/watch-for-new-branch
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@github.com:kabass/sample-php-1.git # timeout=10
+Fetching upstream changes from git@github.com:kabass/sample-php-1.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:kabass/sample-php-1.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 381fe8f24a9e9b7adf1cebbcd2508ce4bdeb0a12 (refs/remotes/origin/master)
+Commit message: "update build.xml"
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 381fe8f24a9e9b7adf1cebbcd2508ce4bdeb0a12
+ > git rev-list 381fe8f24a9e9b7adf1cebbcd2508ce4bdeb0a12 # timeout=10
+[watch-for-new-branch] $ /bin/bash /tmp/jenkins8615552610636212325.sh
+
+ERROR: No such job 'feature-watch-for-new-branch-master'; perhaps you meant 'watch-for-new-branch'?
+
+ERROR: 'JOB_NAME' is not a valid parameter. Did you mean BRANCH_NAME?
+java -jar jenkins-cli.jar build JOB [-c] [-f] [-p] [-r N] [-s] [-v] [-w] [--username VAL] [--password VAL] [--password-file VAL]
+Starts a build, and optionally waits for a completion.
+Aside from general scripting use, this command can be
+used to invoke another job from within a build of one job.
+With the -s option, this command changes the exit code based on
+the outcome of the build (exit code 0 indicates a success)
+and interrupting the command will interrupt the job.
+With the -f option, this command changes the exit code based on
+the outcome of the build (exit code 0 indicates a success)
+however, unlike -s, interrupting the command will not interrupt
+the job (exit code 125 indicates the command was interrupted).
+With the -c option, a build will only run if there has been
+an SCM change.
+ JOB                 : Name of the job to build
+ -c                  : Check for SCM changes before starting the build, and if
+                       there's no change, exit without doing a build
+ -f                  : Follow the build progress. Like -s only interrupts are
+                       not passed through to the build.
+ -p                  : Specify the build parameters in the key=value format.
+ -s                  : Wait until the completion/abortion of the command.
+                       Interrupts are passed through to the build.
+ -v                  : Prints out the console output of the build. Use with -s
+ -w                  : Wait until the start of the command
+ --username VAL      : User name to authenticate yourself to Jenkins
+ --password VAL      : Password for authentication. Note that passing a
+                       password in arguments is insecure.
+ --password-file VAL : File that contains the password
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

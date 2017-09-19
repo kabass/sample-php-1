@@ -1,0 +1,221 @@
+Started by user [8mha:////4FForDbhchBGJDOVy32rtSxzl5ykaUgQJVdeJBJPEPlYAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy2EgYe/dLi1CL94MjgEFdfALO8yqnBAAAA[0mSYSTEM
+Building in workspace /home/bka/.jenkins/workspace/feature-sample-php-1-master
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@github.com:kabass/sample-php-1.git # timeout=10
+Fetching upstream changes from git@github.com:kabass/sample-php-1.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:kabass/sample-php-1.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 381fe8f24a9e9b7adf1cebbcd2508ce4bdeb0a12 (refs/remotes/origin/master)
+Commit message: "update build.xml"
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 381fe8f24a9e9b7adf1cebbcd2508ce4bdeb0a12
+First time build. Skipping changelog.
+[feature-sample-php-1-master] $ ant
+Buildfile: /home/bka/.jenkins/workspace/feature-sample-php-1-master/build.xml
+
+[8mha:////4FKZoJaEc07zCHfssrYfgsziy6IHaHl4IkRgCiqki+tjAAAAYB+LCAAAAAAAAP9b85aBtbiIQT6jNKU4P0+vJLE4u1gvPjGvRM8xryQksSg9tcQvvyTVvqNr/s+Vl9uYGBgqihikoKqT8/OK83NS9ZwhNEghAwQwghQWAADROOumXQAAAA==[0mclean:
+
+[8mha:////4FKZoJaEc07zCHfssrYfgsziy6IHaHl4IkRgCiqki+tjAAAAYB+LCAAAAAAAAP9b85aBtbiIQT6jNKU4P0+vJLE4u1gvPjGvRM8xryQksSg9tcQvvyTVvqNr/s+Vl9uYGBgqihikoKqT8/OK83NS9ZwhNEghAwQwghQWAADROOumXQAAAA==[0mprepare:
+    [mkdir] Created dir: /home/bka/.jenkins/workspace/feature-sample-php-1-master/build/api
+    [mkdir] Created dir: /home/bka/.jenkins/workspace/feature-sample-php-1-master/build/coverage
+    [mkdir] Created dir: /home/bka/.jenkins/workspace/feature-sample-php-1-master/build/logs
+    [mkdir] Created dir: /home/bka/.jenkins/workspace/feature-sample-php-1-master/build/pdepend
+
+[8mha:////4FKZoJaEc07zCHfssrYfgsziy6IHaHl4IkRgCiqki+tjAAAAYB+LCAAAAAAAAP9b85aBtbiIQT6jNKU4P0+vJLE4u1gvPjGvRM8xryQksSg9tcQvvyTVvqNr/s+Vl9uYGBgqihikoKqT8/OK83NS9ZwhNEghAwQwghQWAADROOumXQAAAA==[0mlint:
+     [lint] No syntax errors detected in /home/bka/.jenkins/workspace/feature-sample-php-1-master/src/Greeting.php
+     [lint] No syntax errors detected in /home/bka/.jenkins/workspace/feature-sample-php-1-master/src/autoload.php
+     [lint] No syntax errors detected in /home/bka/.jenkins/workspace/feature-sample-php-1-master/src/index.php
+     [lint] No syntax errors detected in /home/bka/.jenkins/workspace/feature-sample-php-1-master/tests/GreetingTest.php
+
+[8mha:////4FKZoJaEc07zCHfssrYfgsziy6IHaHl4IkRgCiqki+tjAAAAYB+LCAAAAAAAAP9b85aBtbiIQT6jNKU4P0+vJLE4u1gvPjGvRM8xryQksSg9tcQvvyTVvqNr/s+Vl9uYGBgqihikoKqT8/OK83NS9ZwhNEghAwQwghQWAADROOumXQAAAA==[0mphploc-ci:
+   [phploc] phploc 3.0.0 by Sebastian Bergmann.
+   [phploc] 
+   [phploc] Directories                                          1
+   [phploc] Files                                                4
+   [phploc] 
+   [phploc] Size
+   [phploc]   Lines of Code (LOC)                               72
+   [phploc]   Comment Lines of Code (CLOC)                      15 (20.83%)
+   [phploc]   Non-Comment Lines of Code (NCLOC)                 57 (79.17%)
+   [phploc]   Logical Lines of Code (LLOC)                      17 (23.61%)
+   [phploc]     Classes                                          1 (5.88%)
+   [phploc]       Average Class Length                           0
+   [phploc]         Minimum Class Length                         0
+   [phploc]         Maximum Class Length                         1
+   [phploc]       Average Method Length                          1
+   [phploc]         Minimum Method Length                        1
+   [phploc]         Maximum Method Length                        1
+   [phploc]     Functions                                        7 (41.18%)
+   [phploc]       Average Function Length                        7
+   [phploc]     Not in classes or functions                      9 (52.94%)
+   [phploc] 
+   [phploc] Cyclomatic Complexity
+   [phploc]   Average Complexity per LLOC                     0.12
+   [phploc]   Average Complexity per Class                    1.00
+   [phploc]     Minimum Class Complexity                      1.00
+   [phploc]     Maximum Class Complexity                      1.00
+   [phploc]   Average Complexity per Method                   1.00
+   [phploc]     Minimum Method Complexity                     1.00
+   [phploc]     Maximum Method Complexity                     1.00
+   [phploc] 
+   [phploc] Dependencies
+   [phploc]   Global Accesses                                    0
+   [phploc]     Global Constants                                 0 (0.00%)
+   [phploc]     Global Variables                                 0 (0.00%)
+   [phploc]     Super-Global Variables                           0 (0.00%)
+   [phploc]   Attribute Accesses                                 0
+   [phploc]     Non-Static                                       0 (0.00%)
+   [phploc]     Static                                           0 (0.00%)
+   [phploc]   Method Calls                                       3
+   [phploc]     Non-Static                                       3 (100.00%)
+   [phploc]     Static                                           0 (0.00%)
+   [phploc] 
+   [phploc] Structure
+   [phploc]   Namespaces                                         2
+   [phploc]   Interfaces                                         0
+   [phploc]   Traits                                             0
+   [phploc]   Classes                                            1
+   [phploc]     Abstract Classes                                 0 (0.00%)
+   [phploc]     Concrete Classes                                 1 (100.00%)
+   [phploc]   Methods                                            1
+   [phploc]     Scope
+   [phploc]       Non-Static Methods                             1 (100.00%)
+   [phploc]       Static Methods                                 0 (0.00%)
+   [phploc]     Visibility
+   [phploc]       Public Methods                                 1 (100.00%)
+   [phploc]       Non-Public Methods                             0 (0.00%)
+   [phploc]   Functions                                          1
+   [phploc]     Named Functions                                  0 (0.00%)
+   [phploc]     Anonymous Functions                              1 (100.00%)
+   [phploc]   Constants                                          0
+   [phploc]     Global Constants                                 0 (0.00%)
+   [phploc]     Class Constants                                  0 (0.00%)
+   [phploc] 
+   [phploc] Tests
+   [phploc]   Classes                                            1
+   [phploc]   Methods                                            1
+
+[8mha:////4FKZoJaEc07zCHfssrYfgsziy6IHaHl4IkRgCiqki+tjAAAAYB+LCAAAAAAAAP9b85aBtbiIQT6jNKU4P0+vJLE4u1gvPjGvRM8xryQksSg9tcQvvyTVvqNr/s+Vl9uYGBgqihikoKqT8/OK83NS9ZwhNEghAwQwghQWAADROOumXQAAAA==[0mpdepend:
+  [pdepend] PDepend 2.2.4
+  [pdepend] 
+  [pdepend] Parsing source files:
+  [pdepend] ...                                                              3
+  [pdepend] 
+  [pdepend] Calculating Dependency metrics:
+  [pdepend]                                                                  3
+  [pdepend] 
+  [pdepend] Calculating Coupling metrics:
+  [pdepend]                                                                  4
+  [pdepend] 
+  [pdepend] Calculating Cyclomatic Complexity metrics:
+  [pdepend]                                                                  4
+  [pdepend] 
+  [pdepend] Calculating Inheritance metrics:
+  [pdepend]                                                                  2
+  [pdepend] 
+  [pdepend] Calculating Node Count metrics:
+  [pdepend]                                                                  3
+  [pdepend] 
+  [pdepend] Calculating Node Loc metrics:
+  [pdepend]                                                                  4
+  [pdepend] 
+  [pdepend] Generating pdepend log files, this may take a moment.
+  [pdepend] 
+  [pdepend] Time: 0:00:00; Memory: 8.00Mb
+
+[8mha:////4FKZoJaEc07zCHfssrYfgsziy6IHaHl4IkRgCiqki+tjAAAAYB+LCAAAAAAAAP9b85aBtbiIQT6jNKU4P0+vJLE4u1gvPjGvRM8xryQksSg9tcQvvyTVvqNr/s+Vl9uYGBgqihikoKqT8/OK83NS9ZwhNEghAwQwghQWAADROOumXQAAAA==[0mphpmd-ci:
+
+[8mha:////4FKZoJaEc07zCHfssrYfgsziy6IHaHl4IkRgCiqki+tjAAAAYB+LCAAAAAAAAP9b85aBtbiIQT6jNKU4P0+vJLE4u1gvPjGvRM8xryQksSg9tcQvvyTVvqNr/s+Vl9uYGBgqihikoKqT8/OK83NS9ZwhNEghAwQwghQWAADROOumXQAAAA==[0mphpcs-ci:
+    [phpcs] Result: 1
+
+[8mha:////4FKZoJaEc07zCHfssrYfgsziy6IHaHl4IkRgCiqki+tjAAAAYB+LCAAAAAAAAP9b85aBtbiIQT6jNKU4P0+vJLE4u1gvPjGvRM8xryQksSg9tcQvvyTVvqNr/s+Vl9uYGBgqihikoKqT8/OK83NS9ZwhNEghAwQwghQWAADROOumXQAAAA==[0mphpcpd-ci:
+   [phpcpd] phpcpd 2.0.3 by Sebastian Bergmann.
+   [phpcpd] 
+   [phpcpd] 0.00% duplicated lines out of 44 total lines of code.
+   [phpcpd] 
+   [phpcpd] Time: 13 ms, Memory: 2.00Mb
+
+[8mha:////4FKZoJaEc07zCHfssrYfgsziy6IHaHl4IkRgCiqki+tjAAAAYB+LCAAAAAAAAP9b85aBtbiIQT6jNKU4P0+vJLE4u1gvPjGvRM8xryQksSg9tcQvvyTVvqNr/s+Vl9uYGBgqihikoKqT8/OK83NS9ZwhNEghAwQwghQWAADROOumXQAAAA==[0mphpunit:
+  [phpunit] PHPUnit 5.4.6 by Sebastian Bergmann and contributors.
+  [phpunit] 
+  [phpunit] Runtime:       PHP 7.0.22-0ubuntu0.17.04.1 with Xdebug 2.5.0
+  [phpunit] Configuration: /home/bka/.jenkins/workspace/feature-sample-php-1-master/build/phpunit.xml
+  [phpunit] 
+  [phpunit] Hello world.                                                                   1 / 1 (100%)
+  [phpunit] 
+  [phpunit] Time: 85 ms, Memory: 12.00MB
+  [phpunit] 
+  [phpunit] OK (1 test, 1 assertion)
+  [phpunit] 
+  [phpunit] Generating code coverage report in Clover XML format ... done
+  [phpunit] 
+  [phpunit] Generating Crap4J report XML file ... done
+  [phpunit] 
+  [phpunit] Generating code coverage report in HTML format ... done
+  [phpunit] 
+  [phpunit] Generating code coverage report in PHPUnit XML format ... done
+
+[8mha:////4FKZoJaEc07zCHfssrYfgsziy6IHaHl4IkRgCiqki+tjAAAAYB+LCAAAAAAAAP9b85aBtbiIQT6jNKU4P0+vJLE4u1gvPjGvRM8xryQksSg9tcQvvyTVvqNr/s+Vl9uYGBgqihikoKqT8/OK83NS9ZwhNEghAwQwghQWAADROOumXQAAAA==[0mphpdox:
+   [phpdox] phpDox 0.8.1.1 - Copyright (C) 2010 - 2017 by Arne Blankerts
+   [phpdox] 
+   [phpdox] [19.09.2017 - 19:09:40] Using config file './phpdox.xml'
+   [phpdox] [19.09.2017 - 19:09:40] Registered collector backend 'parser'
+   [phpdox] [19.09.2017 - 19:09:40] Registered enricher 'build'
+   [phpdox] [19.09.2017 - 19:09:40] Registered enricher 'git'
+   [phpdox] [19.09.2017 - 19:09:40] Registered enricher 'checkstyle'
+   [phpdox] [19.09.2017 - 19:09:40] Registered enricher 'phpcs'
+   [phpdox] [19.09.2017 - 19:09:40] Registered enricher 'pmd'
+   [phpdox] [19.09.2017 - 19:09:40] Registered enricher 'phpunit'
+   [phpdox] [19.09.2017 - 19:09:40] Registered enricher 'phploc'
+   [phpdox] [19.09.2017 - 19:09:40] Registered output engine 'xml'
+   [phpdox] [19.09.2017 - 19:09:40] Registered output engine 'html'
+   [phpdox] [19.09.2017 - 19:09:40] Starting to process project 'Money'
+   [phpdox] [19.09.2017 - 19:09:40] Starting collector
+   [phpdox] [19.09.2017 - 19:09:40] Scanning directory '../src' for files to process
+   [phpdox] 
+   [phpdox] ..                                                	[2]
+   [phpdox] 
+   [phpdox] [19.09.2017 - 19:09:40] Saving results to directory 'phpdox'
+   [phpdox] [19.09.2017 - 19:09:40] Resolving inheritance
+   [phpdox] 
+   [phpdox] .                                                 	[1]
+   [phpdox] 
+   [phpdox] [19.09.2017 - 19:09:40] Collector process completed
+   [phpdox] 
+   [phpdox] [19.09.2017 - 19:09:40] Starting generator
+   [phpdox] [19.09.2017 - 19:09:40] Loading enrichers
+   [phpdox] [19.09.2017 - 19:09:40] Enricher Build Information initialized successfully
+   [phpdox] [19.09.2017 - 19:09:40] Enricher GIT information initialized successfully
+   [phpdox] [19.09.2017 - 19:09:40] Enricher PHPLoc xml initialized successfully
+   [phpdox] [19.09.2017 - 19:09:40] Enricher CheckStyle XML initialized successfully
+   [phpdox] [19.09.2017 - 19:09:40] Enricher PHPMessDetector XML initialized successfully
+   [phpdox] [19.09.2017 - 19:09:40] Enricher PHPUnit Coverage XML initialized successfully
+   [phpdox] [19.09.2017 - 19:09:40] Starting event loop.
+   [phpdox] 
+   [phpdox] ...................                               	[19]
+   [phpdox] 
+   [phpdox] [19.09.2017 - 19:09:40] Generator process completed
+   [phpdox] [19.09.2017 - 19:09:40] Processing project 'Money' completed.
+   [phpdox] 
+   [phpdox] 
+   [phpdox] Time: 104 ms, Memory: 6.00Mb
+   [phpdox] 
+
+[8mha:////4FKZoJaEc07zCHfssrYfgsziy6IHaHl4IkRgCiqki+tjAAAAYB+LCAAAAAAAAP9b85aBtbiIQT6jNKU4P0+vJLE4u1gvPjGvRM8xryQksSg9tcQvvyTVvqNr/s+Vl9uYGBgqihikoKqT8/OK83NS9ZwhNEghAwQwghQWAADROOumXQAAAA==[0m-check-failure:
+
+[8mha:////4FKZoJaEc07zCHfssrYfgsziy6IHaHl4IkRgCiqki+tjAAAAYB+LCAAAAAAAAP9b85aBtbiIQT6jNKU4P0+vJLE4u1gvPjGvRM8xryQksSg9tcQvvyTVvqNr/s+Vl9uYGBgqihikoKqT8/OK83NS9ZwhNEghAwQwghQWAADROOumXQAAAA==[0mbuild:
+
+[8mha:////4CYu9XAd6Lf5zHVpFXiRWthgmpuzHWxkObwkq96pQLHuAAAAYB+LCAAAAAAAAP9b85aBtbiIQSGjNKU4P0+vJLE4u1gvPjGvRM8xr8S/tCQ5PzfVL78ktUuDM0uMry+HiYGhoohBCqo8OT+vOD8nVc8ZQoMUMkAAI0hhAQAUXUdTXgAAAA==[0mBUILD SUCCESSFUL
+Total time: 0 seconds
+[CHECKSTYLE] Collecting checkstyle analysis files...
+[CHECKSTYLE] Searching for all files in /home/bka/.jenkins/workspace/feature-sample-php-1-master that match the pattern build/logs/checkstyle.xml
+[CHECKSTYLE] Parsing 1 file in /home/bka/.jenkins/workspace/feature-sample-php-1-master
+[CHECKSTYLE] Successfully parsed file /home/bka/.jenkins/workspace/feature-sample-php-1-master/build/logs/checkstyle.xml with 5 unique warnings and 0 duplicates.
+<Git Blamer> Using GitBlamer to create author and commit information for all warnings.
+<Git Blamer> GIT_COMMIT=381fe8f24a9e9b7adf1cebbcd2508ce4bdeb0a12, workspace=/home/bka/.jenkins/workspace/feature-sample-php-1-master
+ > git rev-parse 381fe8f24a9e9b7adf1cebbcd2508ce4bdeb0a12^{commit} # timeout=10
+Finished: SUCCESS

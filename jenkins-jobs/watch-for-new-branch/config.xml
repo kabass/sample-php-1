@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.5.1">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>git@github.com:kabass/sample-php-1.git</url>
+        <credentialsId>e829ff57-3c43-442b-b783-fba3406bee2d</credentialsId>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>#!/bin/bash
+
+GIT_REPOSITORY_PATH=$(git remote get-url origin) # Get the repository path
+GIT_REPOSITORY_NAME=$(basename $GIT_REPOSITORY_PATH .git) # Extract the repository name
+echo &quot;bass ka&quot;
+echo $GIT_REPOSITORY_PATH
+echo $GIT_REPOSITORY_NAME
+# Get all branches from current repository
+git branch -r  | grep -v &quot;origin/HEAD&quot;  | sed &quot;s/^[ \t]*//;s/[ \t]*$//&quot; | sed &quot;s/^origin\///&quot;  | grep -v &quot;^$&quot; &gt; branches 
+
+# For each branch
+while read -r line # Loop through all the lines in the branches file
+do
+BRANCH=$line
+JOB_NAME=&quot;feature&quot;-$GIT_REPOSITORY_NAME-$BRANCH # Create a job name for this branch
+echo $JOB_NAME
+
+# Curl the Job URL to see if it exists
+SHOULD_BE_404_IF_NEW_JOB=$(java -jar ~/logiciel/jenkins/jenkins-cli.jar -s http://localhost:8080  -auth admin:admin  get-job $JOB_NAME)
+
+# Only create a job if it doesn&quot;t already exist. No point doing it twice
+if [ -z &quot;$SHOULD_BE_404_IF_NEW_JOB&quot; ]; then
+
+java -jar ~/logiciel/jenkins/jenkins-cli.jar -s http://localhost:8080 -auth admin:admin  build php-jenkins-sample-generator -p BRANCH_NAME=$BRANCH -p PROJECT_NAME=$GIT_REPOSITORY_NAME
+
+fi
+
+done &lt; branches
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>
