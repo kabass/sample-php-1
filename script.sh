@@ -1,24 +1,27 @@
 #!/bin/bash
-GIT_REPOSITORY_PATH=`git rev-parse --show-toplevel` # Get the repository path
-GIT_REPOSITORY_NAME=`basename $GIT_REPOSITORY_PATH` # Extract the repository name
 
-# Get all branches from current repository
-git branch -r  | grep -v "origin/HEAD"  | sed "s/^[ \t]*//;s/[ \t]*$//" | sed "s/^origin\///"  | grep -v "^$" > branches 
 
-# For each branch
-while read -r line # Loop through all the lines in the branches file
-do
-BRANCH=$line
-JOB_NAME=$GIT_REPOSITORY_NAME-$BRANCH # Create a job name for this branch
+git checkout -b 1.0 origin/1.0
 
-# Curl the Job URL to see if it exists
-SHOULD_BE_404_IF_NEW_JOB=$(java -jar ~/logiciel/jenkins/jenkins-cli.jar -s http://localhost:8080  -auth admin:admin  get-job feature-$JOB_NAME)
-echo $SHOULD_BE_404_IF_NEW_JOB
-# Only create a job if it doesn"t already exist. No point doing it twice
-if [ -z "$SHOULD_BE_404_IF_NEW_JOB" ]; then
+# geting current version
+IN=$(jq .version composer.json)
+set -- "$IN"
+IFS="."; declare -a Array=($*)
+IN="${Array[2]}"
+set -- "$IN"
+IFS="-";
+declare -a Array=($*)
+declare -a  NVERSION=${Array[0]}
+NPLUSVERSION=$((${NVERSION}+1))
 
-java -jar ~/logiciel/jenkins/jenkins-cli.jar -s http://localhost:8080 -auth admin:admin  build php-jenkins-sample-generator -p BRANCH_NAME=$JOB_NAME
+#taging versio
+git tag -a "1.0.${NVERSION}" -m "taging version"
+git push --tags
 
-fi
 
-done < branches
+jq .version="\"1.0.${NPLUSVERSION}-dev\"" composer.json | sponge composer.json
+git add .
+git commit -m "jenkins : adding version"
+git push origin 1.0
+git checkout master
+git rebase origin/master
