@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<org.jenkinsci.plugins.jobgenerator.GeneratorRun plugin="jobgenerator@1.22">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.cli.BuildCommand_-CLICause>
+            <userId>admin</userId>
+            <startedBy>admin</startedBy>
+          </hudson.cli.BuildCommand_-CLICause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <hudson.model.ParametersAction>
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <org.jenkinsci.plugins.jobgenerator.parameters.GeneratorKeyValueParameterValue>
+          <name>BRANCH_NAME</name>
+          <description></description>
+          <value>1.0</value>
+        </org.jenkinsci.plugins.jobgenerator.parameters.GeneratorKeyValueParameterValue>
+        <org.jenkinsci.plugins.jobgenerator.parameters.GeneratorKeyValueParameterValue>
+          <name>PROJECT_NAME</name>
+          <description></description>
+          <value>sample-php-1</value>
+        </org.jenkinsci.plugins.jobgenerator.parameters.GeneratorKeyValueParameterValue>
+      </parameters>
+      <parameterDefinitionNames class="org.jenkinsci.plugins.jobgenerator.parameters.GeneratorParametersDefinitionProperty$1">
+        <outer-class>
+          <parameterDefinitions class="java.util.Arrays$ArrayList">
+            <a class="hudson.model.ParameterDefinition-array"/>
+          </parameterDefinitions>
+        </outer-class>
+      </parameterDefinitionNames>
+    </hudson.model.ParametersAction>
+    <org.jenkinsci.plugins.jobgenerator.actions.GeneratedJobBuildAction>
+      <jobName>sample-php-1-branch-analizer-1.0</jobName>
+      <created>true</created>
+    </org.jenkinsci.plugins.jobgenerator.actions.GeneratedJobBuildAction>
+  </actions>
+  <queueId>391</queueId>
+  <timestamp>1506205080671</timestamp>
+  <startTime>1506205080671</startTime>
+  <result>SUCCESS</result>
+  <duration>19</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/home/bka/.jenkins/workspace/php-branch-analizer-job-generator@4</workspace>
+  <hudsonVersion>2.60.2</hudsonVersion>
+  <scm class="hudson.plugins.git.GitChangeLogParser" plugin="git@3.5.1">
+    <authorOrCommitter>false</authorOrCommitter>
+  </scm>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+  <downstreamGenerators/>
+</org.jenkinsci.plugins.jobgenerator.GeneratorRun>

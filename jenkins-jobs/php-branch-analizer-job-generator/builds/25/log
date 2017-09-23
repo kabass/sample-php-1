@@ -1,0 +1,13 @@
+Started by timer
+Building in workspace /home/bka/.jenkins/workspace/php-jenkins-sample-generator@22
+FATAL: null
+[8mha:////4IlgVKz034cVr8B09nt0jpHRODdwfnWxXkaKfo5Mai4SAAAAVx+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0mV3NWzufebKBsTA0NFEYMUmgZnCA1SyAABjCCFBQC2xNaiYAAAAA==[0mjava.lang.NullPointerException
+	at org.jenkinsci.plugins.jobgenerator.GeneratorRun$GeneratorImpl.deleteJob(GeneratorRun.java:688)
+	at org.jenkinsci.plugins.jobgenerator.GeneratorRun$GeneratorImpl.deleteJobs(GeneratorRun.java:649)
+	at org.jenkinsci.plugins.jobgenerator.GeneratorRun$GeneratorImpl.doRun(GeneratorRun.java:305)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:490)
+	at hudson.model.Run.execute(Run.java:1735)
+	at org.jenkinsci.plugins.jobgenerator.GeneratorRun.run(GeneratorRun.java:284)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:405)
+Finished: FAILURE

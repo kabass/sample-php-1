@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<org.jenkinsci.plugins.jobgenerator.JobGenerator plugin="jobgenerator@1.22">
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <org.jenkinsci.plugins.jobgenerator.parameters.GeneratorKeyValueParameterDefinition>
+          <name>PROJECT_NAME</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </org.jenkinsci.plugins.jobgenerator.parameters.GeneratorKeyValueParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>VERSION</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.5.1">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>git@github.com:kabass/${PROJECT_NAME}.git</url>
+        <credentialsId>e829ff57-3c43-442b-b783-fba3406bee2d</credentialsId>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>#!/bin/bash
+
+git checkout -b ${VERSION} origin/master
+jq .version=&quot;\&quot;${VERSION}.0-dev\&quot;&quot; composer.json | sponge composer.json
+git add .
+git commit -m &quot;jenkins : adding version&quot;
+git push origin ${VERSION}
+git checkout master 
+git rebase origin/master
+git merge ${VERSION} --no-edit 
+jq .version=&quot;\&quot;dev\&quot;&quot; composer.json | sponge composer.json
+git commit -am &quot;jenkins : merge release branch&quot; --allow-empty
+git push origin master
+java -jar ~/logiciel/jenkins/jenkins-cli.jar -s http://localhost:8080 -auth admin:admin  build php-branch-analizer-job-generator -p BRANCH_NAME=${VERSION} -p PROJECT_NAME=${PROJECT_NAME}
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers>
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.34">
+      <deleteDirs>false</deleteDirs>
+      <cleanupParameter></cleanupParameter>
+      <externalDelete></externalDelete>
+    </hudson.plugins.ws__cleanup.PreBuildCleanup>
+  </buildWrappers>
+  <generatedJobName>${PROJECT_NAME}-release-job</generatedJobName>
+  <generatedDisplayJobName>${PROJECT_NAME}-release-job</generatedDisplayJobName>
+  <autoRunJob>false</autoRunJob>
+</org.jenkinsci.plugins.jobgenerator.JobGenerator>
