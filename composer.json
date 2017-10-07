@@ -1,7 +1,7 @@
 {
   "name": "bka/sample-php-1",
   "description": "Value Object that represents a monetary value (using a currency's smallest unit)",
-  "version": "1.0.13",
+  "version": "1.0.14-dev",
   "keywords": [
     "bka"
   ],
